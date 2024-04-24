@@ -20,7 +20,7 @@ const makeChange = (c) => {
     return { q: quarters, d: dimes, n: nickels, p: pennies };
 };
 
-// const c = prompt("Enter c: ");
+const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
 
 module.exports = makeChange;
