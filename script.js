@@ -1,23 +1,22 @@
-const makeChange = (c) => {
-    const quarterValue = 25;
-    const dimeValue = 10;
-    const nickelValue = 5;
-    const pennyValue = 1;
+function makeChange(c) {
+    var Q = 25;
+    var D = 10;
+    var N = 5;
+    var P = 1;
 
-    c = parseFloat(c); 
+    var q = Math.floor(c / Q);
+    c = c % Q;
 
-    let quarters = Math.floor(c / quarterValue);
-    c %= quarterValue;
+    var d = Math.floor(c / D);
+    c = c % D;
 
-    let dimes = Math.floor(c / dimeValue);
-    c %= dimeValue;
+    var n = Math.floor(c / N);
+    c = c % N;
 
-    let nickels = Math.floor(c / nickelValue);
-    c %= nickelValue;
+    var p = Math.floor(c / P);
 
-    let pennies = Math.floor(c / pennyValue);
+    return {"q": q, "d": d, "n": n, "p": p};
+}
 
-    return { q: quarters, d: dimes, n: nickels, p: pennies };
-};
-
-module.exports = makeChange;
+console.log(makeChange(47));  
+console.log(makeChange(24));  
