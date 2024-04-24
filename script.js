@@ -1,5 +1,5 @@
 const makeChange = (c) => {
- nst makeChange = (c) => {
+ 
    const quarterValue = 25;
     const dimeValue = 10;
     const nickelValue = 5;
